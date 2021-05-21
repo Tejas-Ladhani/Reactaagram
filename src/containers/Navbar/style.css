@@ -1,0 +1,11 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: white;
+}
+.userPic{
+    height: 30px;
+    border-radius: 50%;
+}
