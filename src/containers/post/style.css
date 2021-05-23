@@ -1,4 +1,4 @@
-.post{
+.post {
     background-color: white;
     justify-content: center;
     width: 90vw;
@@ -6,34 +6,42 @@
     padding: 8px;
     margin-top: 16px;
 }
-.post__header{
+
+.post__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.post__headerLeft{
+
+.post__headerLeft {
     display: flex;
     align-items: center;
-
 }
-#post__userProfile{
+
+#post__userProfile {
     height: 28px;
     border-radius: 50%;
 }
 
-.post__dltBtn{
+.post__dltBtn {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 }
-.post__postImage{
-    width:95%;
+
+.post__postImage {
+    width: 95%;
     margin: 16px 8px;
-    object-fit:contain;
+    object-fit: contain;
     max-height: 60vh;
 }
-.post__caption{
-    margin: 0px 8px;
 
+.post__caption {
+    margin: 0px 8px;
+}
+
+.post>button:disabled, button[disabled] {
+    /* cursor: none;  */
+    display: none;
 }

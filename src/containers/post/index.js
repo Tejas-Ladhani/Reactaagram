@@ -1,9 +1,19 @@
 import React, { useContext } from 'react'
 import './style.css'
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Comment } from '../../components';
-export default function Post({ profileUrl, username, id, postUrl, caption, comments }) {
+import { UserContext } from '../../contexts/user'
+import { Comment, CommentInput } from '../../components';
+import { db, storage } from '../../firebase';
+export default function Post({ profileUrl, username, id, postUrl, caption, comments, userId }) {
 
+    const [user, setUser] = useContext(UserContext);
+    const deletePost = () => {
+        // 1. delete  image from storage
+        storage.refFromURL(postUrl).delete().then(() => alert("Sucessfully Deleted.")).catch(() => alert("Try again, Later !"))
+
+        // 2. delete info from firestore
+        db.collection('posts').doc(id).delete().then(() => console.log('Deleted suceesfully.'))
+    }
 
     return (
         <div className="post">
@@ -13,7 +23,8 @@ export default function Post({ profileUrl, username, id, postUrl, caption, comme
                     <p style={{ paddingLeft: "4px" }}>{username}</p>
                 </div>
                 {/* <DeleteIcon/> */}
-                <button className="post__dltBtn">Delete</button>
+
+                <button className="post__dltBtn" disabled={(user !== null && userId !== null && user.uid == userId ? false : true)} onClick={deletePost}>Delete</button>
             </div>
             <div className="post__center">
                 <img className="post__postImage" src={postUrl} alt={caption} />
@@ -25,9 +36,11 @@ export default function Post({ profileUrl, username, id, postUrl, caption, comme
                     <span style={{ fontFamily: "sans-serif" }}>{caption}</span>
                 </p>
             </div>
+            {comments ? comments.map((cmnt, index) => { console.log(cmnt); return (<Comment key={index} username={cmnt.username} commentMsg={cmnt.commentMsg} />) }) : <></>}
 
-            {comments ? comments.map((cmnt,index) => { return(<Comment key={index} username={cmnt.username} commentMsg={cmnt.commentMsg} />) }) : <></>}
+            <hr style={{ margin: '8px 0px', opacity: '0.19' }} />
 
+            {user ? <CommentInput id={id} comments={comments} /> : <></>}
         </div>
     )
 }

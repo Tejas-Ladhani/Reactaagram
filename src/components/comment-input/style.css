@@ -1,0 +1,18 @@
+.commentInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentInput__textArea {
+    outline: none;
+    border: none;
+    resize: none;
+    width: 100%;
+    margin:8px 0px;
+    font-family: sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.commentInput__btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

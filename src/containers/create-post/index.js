@@ -51,6 +51,7 @@ export default function CreatePost() {
                                 name: user.displayName,
                                 profilePic: user.photoURL,
                                 email: user.email,
+                                uId:user.uid,
                             })
                             // db.collection('main').doc(user.uid).collection('posts').add({
                             //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -100,7 +101,7 @@ export default function CreatePost() {
                             <label htmlFor="fileinput">
                                 <AddAPhotoIcon style={{ cursor: "pointer", fontSize: "20px" }} />
                             </label>
-                            <input id="fileinput" type="file" accept="image/*" onChange={handleChange} />
+                            <input id="fileinput" type="file" accept=".gif,.jpg,.jpeg,.png" onChange={handleChange} />
                         </div>
                         <button className="createPost_uploadBtn" onClick={handleUpload} style={{ color: caption ? "#000" : "lightgrey" }}>{`upload ${progress !== 0 ? progress : ""}`}</button>
                     </div>
