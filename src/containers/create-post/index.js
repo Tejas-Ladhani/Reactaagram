@@ -44,21 +44,39 @@ export default function CreatePost() {
                     //get download url and upload info
                     storage.ref("images").child(`${imageName}.jpg`).getDownloadURL().then(
                         (imageUrl) => {
-                            db.collection('main').doc(user.uid).collection('posts').add({
+                            db.collection('posts').add({
                                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                                 caption: caption,
-                                imageURL: imageUrl})
-                            
-                                db.collection('main').doc(user.uid).set({
-                                    name:user.displayName,
-                                    profilePic:user.photoURL,
-                                    email:user.email,
-                                    
-                                })
+                                imageURL: imageUrl,
+                                name: user.displayName,
+                                profilePic: user.photoURL,
+                                email: user.email,
+                            })
+                            // db.collection('main').doc(user.uid).collection('posts').add({
+                            //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                            //     caption: caption,
+                            //     imageURL: imageUrl,
+                            //     name: user.displayName,
+                            //     profilePic: user.photoURL,
+                                
+                            // })
+
+                            // db.collection('main').doc(user.uid).set({
+                            //     name: user.displayName,
+                            //     profilePic: user.photoURL,
+                            //     email: user.email,
+
+                            // })
 
                         }
                     )
+                    // once the image & caption is upload the field should become blank :
+                    setProgress(0);
+                    setCaption("");
+                    setImage(null);
+                    document.getElementById("image-preview").style.display="none";
                 })
+
         }
     }
 
@@ -84,7 +102,7 @@ export default function CreatePost() {
                             </label>
                             <input id="fileinput" type="file" accept="image/*" onChange={handleChange} />
                         </div>
-                        <button className="createPost_uploadBtn" onClick={handleUpload} style={{ color: caption ? "#000" : "lightgrey" }}>{`upload ${progress!==0?progress:""}`}</button>
+                        <button className="createPost_uploadBtn" onClick={handleUpload} style={{ color: caption ? "#000" : "lightgrey" }}>{`upload ${progress !== 0 ? progress : ""}`}</button>
                     </div>
                 </div>
                 : <>

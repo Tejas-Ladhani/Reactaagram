@@ -20,6 +20,7 @@
 .createPost_textarea {
     border: none;
     outline: none;
+    resize: none; /* Removes resize btn in textarea */
     width: 100%;
     font-size: 14px;
     margin-top: 6px;
@@ -37,6 +38,7 @@
 .createPost_uploadBtn {
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 #image-preview {

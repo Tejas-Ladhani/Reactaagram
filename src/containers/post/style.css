@@ -1,0 +1,39 @@
+.post{
+    background-color: white;
+    justify-content: center;
+    width: 90vw;
+    max-width: 650px;
+    padding: 8px;
+    margin-top: 16px;
+}
+.post__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post__headerLeft{
+    display: flex;
+    align-items: center;
+
+}
+#post__userProfile{
+    height: 28px;
+    border-radius: 50%;
+}
+
+.post__dltBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.post__postImage{
+    width:95%;
+    margin: 16px 8px;
+    object-fit:contain;
+    max-height: 60vh;
+}
+.post__caption{
+    margin: 0px 8px;
+
+}

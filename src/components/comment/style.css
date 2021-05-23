@@ -1,0 +1,6 @@
+.comment{
+    margin: 0px 8px;
+}
+.comment>p{
+    font-size: 16px;
+}
