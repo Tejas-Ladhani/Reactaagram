@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { UserContext } from '../../contexts/user'
 import { Post } from '..';
 
@@ -11,7 +11,7 @@ export default function Feed() {
 
     useEffect(() => {
         db.collection('posts').onSnapshot((snapshot) => {
-            console.log(snapshot)
+            // console.log(snapshot)
             setPosts(snapshot.docs.map((data) => {
                 return ({
                     id: data.id,

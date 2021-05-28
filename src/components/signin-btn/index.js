@@ -1,6 +1,8 @@
 import React, {  useContext } from 'react'
 import { signInWithGoogle } from '../../services/auth'
 import { UserContext } from '../../contexts/user'
+
+
 import './style.css'
 function SignInBn() {
     const [user, setUser] = useContext(UserContext);

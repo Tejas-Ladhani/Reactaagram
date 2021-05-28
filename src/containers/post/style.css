@@ -37,6 +37,13 @@
     max-height: 60vh;
 }
 
+.img_skeleton{
+    width: 95%;
+    margin: 16px 8px;
+    object-fit: contain;
+    max-height: 60vh;
+    background-color: rgb(143, 143, 143);
+}
 .post__caption {
     margin: 0px 8px;
 }

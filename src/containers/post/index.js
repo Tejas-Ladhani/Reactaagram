@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import './style.css'
-import DeleteIcon from '@material-ui/icons/Delete';
 import { UserContext } from '../../contexts/user'
 import { Comment, CommentInput } from '../../components';
 import { db, storage } from '../../firebase';
+// import DeleteIcon from '@material-ui/icons/Delete';
+
 export default function Post({ profileUrl, username, id, postUrl, caption, comments, userId }) {
 
     const [user, setUser] = useContext(UserContext);
@@ -24,7 +25,7 @@ export default function Post({ profileUrl, username, id, postUrl, caption, comme
                 </div>
                 {/* <DeleteIcon/> */}
 
-                <button className="post__dltBtn" disabled={(user !== null && userId !== null && user.uid == userId ? false : true)} onClick={deletePost}>Delete</button>
+                <button className="post__dltBtn" disabled={(user !== null && userId !== null && user.uid === userId ? false : true)} onClick={deletePost}>Delete</button>
             </div>
             <div className="post__center">
                 <img className="post__postImage" src={postUrl} alt={caption} />
@@ -36,7 +37,7 @@ export default function Post({ profileUrl, username, id, postUrl, caption, comme
                     <span style={{ fontFamily: "sans-serif" }}>{caption}</span>
                 </p>
             </div>
-            {comments ? comments.map((cmnt, index) => { console.log(cmnt); return (<Comment key={index} username={cmnt.username} commentMsg={cmnt.commentMsg} />) }) : <></>}
+            {comments ? comments.map((cmnt, index) => { return (<Comment key={index} username={cmnt.username} commentMsg={cmnt.commentMsg} />) }) : <></>}
 
             <hr style={{ margin: '8px 0px', opacity: '0.19' }} />
 
