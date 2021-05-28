@@ -1,0 +1,13 @@
+.signInBtn {
+    background-color: rgb(21, 100, 247);
+    text-align: center;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.signInBtn:hover {
+    cursor: pointer;
+}

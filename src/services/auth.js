@@ -12,7 +12,9 @@ const signInWithGoogle = async () => {
 }
 
 const signOut = async () => {
-    await auth.signOut().then(() => console.log('success')).catch((err) => console.log(err))
+    let status;
+    await auth.signOut().then(() => status = true).catch((err) => console.log(err))
+    return status
 }
 
-export {signInWithGoogle,signOut};
+export { signInWithGoogle, signOut };

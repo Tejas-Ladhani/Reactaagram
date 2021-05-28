@@ -1,6 +1,6 @@
 import { Button, Menu, MenuItem } from '@material-ui/core';
 import React, { useContext } from 'react'
-import { SignInBtn } from '../../components'
+import { SignInBtn, SignOutBtn } from '../../components'
 import { UserContext } from '../../contexts/user'
 import './style.css'
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
 
                     <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    <SignOutBtn/>
                 </Menu></>
                 
                 : <SignInBtn />}
