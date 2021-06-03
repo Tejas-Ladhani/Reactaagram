@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://upload.wikimedia.org/wikipedia/he/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ReactaGram</h3>
@@ -29,8 +29,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Reactaagram][product-screenshot]](https://example.com)
 
 Photo and video sharing social networking react application.  The app allows users to upload media that can be commented by other users.
 
