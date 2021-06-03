@@ -2,3 +2,11 @@
     background-color: rgb(247, 247, 247);
     min-height: 100vh;
 }
+.home_feed_fallback{
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
