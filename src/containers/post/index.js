@@ -28,7 +28,7 @@ export default function Post({ profileUrl, username, id, postUrl, caption, comme
                 <button className="post__dltBtn" disabled={(user !== null && userId !== null && user.uid === userId ? false : true)} onClick={deletePost}>Delete</button>
             </div>
             <div className="post__center">
-                <img className="post__postImage" src={postUrl} alt={caption} />
+                <img className="post__postImage" src={postUrl} alt={caption}  />
             </div>
 
             <div className="post__caption">

@@ -9,7 +9,7 @@ function SignOutBn() {
     const signOutBtnClick = async () => { let successFull = await signOut(); if (successFull) setUser(null) }
 
     return (
-        <div className="signInBtn" onClick={signOutBtnClick}>
+        <div className="signOutBtn" onClick={signOutBtnClick}>
             <p>Sign Out</p>
         </div>
     )

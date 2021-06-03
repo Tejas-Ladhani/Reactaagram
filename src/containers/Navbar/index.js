@@ -35,7 +35,8 @@ export default function Navbar() {
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
 
                     <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <SignOutBtn/>
+                    <MenuItem onClick={handleClose}><SignOutBtn/></MenuItem>
+                    
                 </Menu></>
                 
                 : <SignInBtn />}

@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { UserContext } from '../../contexts/user'
 import { Post } from '..';
 
@@ -10,7 +10,7 @@ export default function Feed() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        db.collection('posts').onSnapshot((snapshot) => {
+        db.collection('posts').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
             // console.log(snapshot)
             setPosts(snapshot.docs.map((data) => {
                 return ({
@@ -20,7 +20,8 @@ export default function Feed() {
                     comments: data.data().comments,
                     username: data.data().name,
                     profilePic: data.data().profilePic,
-                    userId: data.data().uId
+                    userId: data.data().uId,
+
                 })
             }))
             //     console.log("d "+d)
@@ -44,13 +45,7 @@ export default function Feed() {
 
     return (
         <div className="feed">
-            <Post
-                profileUrl='https://tejas-ladhani.github.io/Tejas.Ladhani/assets/images/photo.jpg'
-                username="TejasLadhani"
-                postUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Fh2qh1f34FwFfmC0lt5zTwHaEK%26pid%3DApi"
-                caption="This is my First Post with first caption."
 
-            />
 
             {posts.map((p) => {
                 return (
