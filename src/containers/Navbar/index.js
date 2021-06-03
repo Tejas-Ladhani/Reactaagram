@@ -18,7 +18,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar">
-            <p>ReactSocio</p>
+            <p>ReactaGram</p>
             {/* {console.log(user)} */}
             {user ? <>
 
