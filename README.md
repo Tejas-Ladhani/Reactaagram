@@ -61,7 +61,7 @@ Photo and video sharing social networking react application.  The app allows use
    const firebaseConfig = 'ENTER YOUR API';
    ```
 
-In the project directory, you can run:
+5. In the project directory, you can run:
 
 ### `npm start`
 
