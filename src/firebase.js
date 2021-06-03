@@ -4,7 +4,7 @@ import 'firebase/auth'
 import 'firebase/storage'
 
 const firebaseConfig = {
-   
+    
   };
 
 //config the firebase with this app.

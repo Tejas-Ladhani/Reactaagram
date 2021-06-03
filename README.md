@@ -20,14 +20,10 @@
     <br />
     <a href="https://reactaagram.web.app/">View Demo</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/Tejas-Ladhani/Reactaagram/issues">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
   </p>
 </p>
-
-
-
 
 
 
@@ -50,34 +46,43 @@ Photo and video sharing social networking react application.  The app allows use
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Tejas-Ladhani/Reactaagram.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+3. Create firebase app & get API keys from [https://firebase.google.com/](https://firebase.google.com/)
+
+4. Enter your API in `firebase.js`
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   const firebaseConfig = 'ENTER YOUR API';
    ```
 
+In the project directory, you can run:
 
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 
 
@@ -109,16 +114,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [contributors-url]:https://github.com/Tejas-Ladhani/Reactaagram/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [forks-url]:https://github.com/Tejas-Ladhani/Reactaagram/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [stars-url]:https://github.com/Tejas-Ladhani/Reactaagram/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [issues-url]:https://github.com/Tejas-Ladhani/Reactaagram/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [license-url]:https://github.com/Tejas-Ladhani/Reactaagram/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
