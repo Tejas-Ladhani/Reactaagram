@@ -121,5 +121,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
 [issues-url]:https://github.com/Tejas-Ladhani/Reactaagram/issues
 [license-shield]: https://img.shields.io/github/license/Tejas-Ladhani/Reactaagram.svg?style=for-the-badge
-[license-url]:https://github.com/Tejas-Ladhani/Reactaagram/blob/master/LICENSE.txt
+[license-url]:https://github.com/Tejas-Ladhani/Reactaagram/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
